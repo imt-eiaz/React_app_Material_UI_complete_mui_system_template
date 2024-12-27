@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import SideMenu from "../components/SideMenu";
 import { makeStyles } from "@mui/styles";
+import Header from "../components/Header";
+import { CssBaseline } from "@mui/material";
 
 const useStyles = makeStyles({
   appMain: {
@@ -15,7 +17,10 @@ function App() {
   return (
     <>
       <SideMenu />
-      <div className={classes.appMain}>here we go </div>
+      <div className={classes.appMain}>
+        <Header />
+      </div>
+      <CssBaseline />
     </>
   );
 }
