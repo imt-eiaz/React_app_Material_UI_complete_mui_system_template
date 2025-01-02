@@ -1,27 +1,68 @@
-import React from "react";
-import Typography from "@mui/material/Typography";
-import { Paper } from "@mui/material";
-// import Grid2 from "@mui/material/Grid2";
-import Grid from "@mui/material/Grid2";
+import * as React from "react";
+import { Box, ThemeProvider, createTheme } from "@mui/system";
 
-export default function Body() {
+const commonStyles = {
+  m: 4,
+  border: 1,
+  width: "20rem",
+  height: "9rem",
+};
+
+const theme = createTheme({
+  palette: {
+    background: {
+      paper: "#fff",
+    },
+    text: {
+      primary: "#173A5E",
+      secondary: "#46505A",
+    },
+    action: {
+      active: "#001E3C",
+    },
+    success: {
+      dark: "#009688",
+    },
+  },
+});
+
+export default function Example() {
   return (
-    <Grid container>
-      <Grid item size={{ md: 3 }}>
-        <Paper>Paper 1</Paper>
-      </Grid>
-
-      <Grid item size={{ md: 3 }}>
-        <Paper>Paper 2</Paper>
-      </Grid>
-
-      <Grid item size={{ md: 3 }}>
-        <Paper>Paper 3</Paper>
-      </Grid>
-
-      <Grid item size={{ md: 3 }}>
-        <Paper>Paper 4</Paper>
-      </Grid>
-    </Grid>
+    <ThemeProvider theme={theme}>
+      <Box sx={{ ...commonStyles, borderColor: "#000" }}>
+        <Box
+          sx={{
+            bgcolor: "background.paper",
+            boxShadow: 1,
+            borderRadius: 2,
+            p: 2,
+            minWidth: 300,
+          }}
+        >
+          <Box sx={{ color: "text.secondary" }}>Sessions</Box>
+          <Box
+            sx={{ color: "text.primary", fontSize: 34, fontWeight: "medium" }}
+          >
+            98.3 K
+          </Box>
+          <Box
+            sx={{
+              color: "success.dark",
+              display: "inline",
+              fontWeight: "bold",
+              mx: 0.5,
+              fontSize: 14,
+            }}
+          >
+            +18.77%
+          </Box>
+          <Box
+            sx={{ color: "text.secondary", display: "inline", fontSize: 14 }}
+          >
+            vs. last week
+          </Box>
+        </Box>
+      </Box>
+    </ThemeProvider>
   );
 }

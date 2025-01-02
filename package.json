@@ -10,6 +10,7 @@
     "@mui/icons-material": "^6.2.1",
     "@mui/material": "^6.2.1",
     "@mui/styles": "^6.3.0",
+    "@mui/x-data-grid": "^7.23.5",
     "cra-template": "1.2.0",
     "jss": "^10.10.0",
     "react": "^19.0.0",
