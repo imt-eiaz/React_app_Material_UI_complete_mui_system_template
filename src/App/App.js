@@ -8,6 +8,7 @@ import { CssBaseline } from "@mui/material";
 import MyGrid from "../components/MyGrid";
 import MyCard from "../components/MyCard";
 import DataTable from "../components/DataTable";
+import Slider from "../components/Slider";
 
 const useStyles = makeStyles({
   appMain: {
@@ -24,6 +25,7 @@ function App() {
       <div className={classes.appMain}>
         <Header />
         <MyGrid />
+        <Slider />
         <MyCard />
         <DataTable />
         {/* <Bod  y /> */}

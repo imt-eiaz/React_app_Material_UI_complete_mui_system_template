@@ -67,7 +67,7 @@ export default function CSSGrid() {
                   fontSize: 14,
                 }}
               >
-                vs. last week
+                vs. last weeks
               </Box>
             </Box>
           </Box>
